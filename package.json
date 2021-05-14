@@ -1,0 +1,19 @@
+{
+  "name": "forkify",
+  "version": "1.0.0",
+  "description": "Recipe application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlbertoRoldanUX-code/Forkify.git"
+  },
+  "author": "Alberto Roldán",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlbertoRoldanUX-code/Forkify/issues"
+  },
+  "homepage": "https://github.com/AlbertoRoldanUX-code/Forkify#readme"
+}
