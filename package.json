@@ -17,7 +17,8 @@
     "url": "https://github.com/AlbertoRoldanUX-code/Forkify/issues"
   },
   "homepage": "https://github.com/AlbertoRoldanUX-code/Forkify#readme",
-  "dependencies": {
-    "parcel": "^2.0.0-beta.2"
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.0-beta.2",
+    "parcel": "^2.0.0-beta.1"
   }
 }
