@@ -11,6 +11,8 @@ const timeout = function (s) {
 // https://forkify-api.herokuapp.com/v2
 
 ///////////////////////////////////////
+//Change entrypoint in package.json from index.js to index.html
+
 // Set up project
 
 //Load recipe from Forkify API
