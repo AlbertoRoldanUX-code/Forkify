@@ -1,5 +1,6 @@
 import icons from 'url:../img/icons.svg';
-console.log(icons);
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 
 const recipeContainer = document.querySelector('.recipe');
 
@@ -14,11 +15,24 @@ const timeout = function (s) {
 // https://forkify-api.herokuapp.com/v2
 
 ///////////////////////////////////////
-//Make first API call
+//Function for spinner
+const renderSpinner = function (parentEl) {
+  const markup = `
+        <div class="spinner">
+          <svg>
+            <use href="${icons}#icon-loader"></use>
+          </svg>
+        </div> `;
 
+  parentEl.innerHTML = '';
+  parentEl.insertAdjacentHTML('afterbegin', markup);
+};
+
+//Make first API call
 const showRecipe = async function () {
   try {
     //1º Loading recipe
+    renderSpinner(recipeContainer);
     const res = await fetch(
       'https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bc886#'
     );
@@ -148,4 +162,6 @@ const showRecipe = async function () {
 
 showRecipe();
 
-//Render recipe to the UI
+//Implement loading spinner
+
+// Add some event handlers
