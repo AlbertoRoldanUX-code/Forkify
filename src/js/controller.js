@@ -37,28 +37,7 @@ const showRecipe = async function () {
 
     //1º Loading recipe
     renderSpinner(recipeContainer);
-    const res = await fetch(
-      `https://forkify-api.herokuapp.com/api/v2/recipes/${id}`
-    );
-    const data = await res.json();
 
-    if (!res.ok) throw new Error(`${data.message} (${res.status})`);
-
-    //Reformat the object that we get, to get rid of the underscores
-    let { recipe } = data.data;
-
-    recipe = {
-      id: recipe.id,
-      title: recipe.title,
-      publisher: recipe.publisher,
-      sourceUrl: recipe.source_url,
-      image: recipe.image_url,
-      servings: recipe.servings,
-      cookingTime: recipe.cooking_time,
-      ingredients: recipe.ingredients,
-    };
-
-    console.log(recipe);
     //2º Render the recipe
     const markup = `
         <figure class="recipe__fig">
@@ -171,4 +150,4 @@ showRecipe();
   window.addEventListener(event, showRecipe)
 );
 
-// Create state object in our model and export it
+// Create loadRecipe function and export it
