@@ -1,3 +1,5 @@
+import * as model from '/model.js';
+
 import icons from 'url:../img/icons.svg';
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
@@ -150,4 +152,4 @@ showRecipe();
   window.addEventListener(event, showRecipe)
 );
 
-// Create loadRecipe function and export it
+// Import ... into the controller
