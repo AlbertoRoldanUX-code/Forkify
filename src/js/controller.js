@@ -39,7 +39,7 @@ const showRecipe = async function () {
     renderSpinner(recipeContainer);
 
     //1º Loading recipe
-    model.loadRecipe(id);
+    await model.loadRecipe(id);
 
     //2º Render the recipe
     const markup = `
@@ -153,4 +153,4 @@ showRecipe();
   window.addEventListener(event, showRecipe)
 );
 
-// Load the recipe
+// Implement error handling in the loadRecipe function
