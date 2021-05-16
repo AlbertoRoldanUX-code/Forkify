@@ -31,10 +31,11 @@ const renderSpinner = function (parentEl) {
 //Make first API call
 const showRecipe = async function () {
   try {
-    //1º Loading recipe
-
     //Get id from the hash
     const id = window.location.hash.slice(1);
+    if (!id) return;
+
+    //1º Loading recipe
     renderSpinner(recipeContainer);
     const res = await fetch(
       `https://forkify-api.herokuapp.com/api/v2/recipes/${id}`
@@ -169,3 +170,7 @@ showRecipe();
 ['hashchange', 'load'].forEach(event =>
   window.addEventListener(event, showRecipe)
 );
+
+// Refactor for MVC
+
+// 1º Create the necessary new files to implement MVC
