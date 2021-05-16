@@ -36,9 +36,10 @@ const showRecipe = async function () {
     //Get id from the hash
     const id = window.location.hash.slice(1);
     if (!id) return;
+    renderSpinner(recipeContainer);
 
     //1º Loading recipe
-    renderSpinner(recipeContainer);
+    model.loadRecipe(id);
 
     //2º Render the recipe
     const markup = `
@@ -152,4 +153,4 @@ showRecipe();
   window.addEventListener(event, showRecipe)
 );
 
-// Import ... into the controller
+// Load the recipe
