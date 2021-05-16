@@ -171,6 +171,4 @@ showRecipe();
   window.addEventListener(event, showRecipe)
 );
 
-// Refactor for MVC
-
-// 1º Create the necessary new files to implement MVC
+// Create state object in our model and export it
