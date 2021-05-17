@@ -43,4 +43,4 @@ controlRecipes();
   window.addEventListener(event, controlRecipes)
 );
 
-// Download fractional to convert numbers to fractions and import it in recipeView
+// Use fractional to convert numbers to fractions
