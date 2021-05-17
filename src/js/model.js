@@ -1,5 +1,6 @@
 import { async } from 'regenerator-runtime';
 import { API_URL } from './config.js';
+import { getJSON } from './helpers.js';
 
 // State object
 export const state = {
@@ -9,11 +10,7 @@ export const state = {
 // Change state object
 export const loadRecipe = async function (id) {
   try {
-    //Make API call
-    const res = await fetch(`${API_URL}/${id}`);
-    const data = await res.json();
-
-    if (!res.ok) throw new Error(`${data.message} (${res.status})`);
+    const data = await getJSON(`${API_URL}/${id}`);
 
     //Reformat the object that we get, to get rid of the underscores
     const { recipe } = data.data;
@@ -31,10 +28,8 @@ export const loadRecipe = async function (id) {
 
     console.log(state.recipe);
   } catch (err) {
-    console.error(err);
+    console.error(`${err} 💥`);
   }
 };
 
-// Implement project configuration module
-
-// Implement general helper functions module
+// Create general helper functions module and set it up
