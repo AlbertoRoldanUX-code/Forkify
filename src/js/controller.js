@@ -43,4 +43,4 @@ controlRecipes();
   window.addEventListener(event, controlRecipes)
 );
 
-// Use fractional to convert numbers to fractions
+// Refactor function from the ingredients section
