@@ -32,4 +32,6 @@ export const loadRecipe = async function (id) {
   }
 };
 
-// Use the publisher subscriber pattern
+// Implement error and success messages
+
+// Implement new method to display error message
