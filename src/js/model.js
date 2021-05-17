@@ -32,4 +32,4 @@ export const loadRecipe = async function (id) {
   }
 };
 
-// Add the number of seconds of the setTimeOut function as a config value
+// Use the publisher subscriber pattern
