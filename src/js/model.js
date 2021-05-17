@@ -62,4 +62,4 @@ export const loadSearchResults = async function (query) {
 //2º Load the search results
 //3º Render the search results
 
-//Create function
+//Create searchView.js and set it up
