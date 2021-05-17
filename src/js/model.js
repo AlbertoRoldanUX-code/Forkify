@@ -5,12 +5,16 @@ import { getJSON } from './helpers.js';
 // State object
 export const state = {
   recipe: {},
+  search: {
+    query: '',
+    results: [],
+  },
 };
 
 // Change state object
 export const loadRecipe = async function (id) {
   try {
-    const data = await getJSON(`${API_URL}/${id}`);
+    const data = await getJSON(`${API_URL}${id}`);
 
     //Reformat the object that we get, to get rid of the underscores
     const { recipe } = data.data;
@@ -33,4 +37,29 @@ export const loadRecipe = async function (id) {
   }
 };
 
-// Implement success messages
+export const loadSearchResults = async function (query) {
+  try {
+    state.search.query = query;
+    const data = await getJSON(`${API_URL}?search=${query}`);
+    console.log(data);
+
+    state.search.results = data.data.recipes.map(rec => {
+      return {
+        id: rec.id,
+        title: rec.title,
+        publisher: rec.publisher,
+        image: rec.image_url,
+      };
+    });
+  } catch (err) {
+    console.error(`${err} 💥`);
+    throw err;
+  }
+};
+
+// Implement searching functionality
+//1º Handle the event of a user searching for recipes
+//2º Load the search results
+//3º Render the search results
+
+//Create function
