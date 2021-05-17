@@ -32,4 +32,4 @@ export const loadRecipe = async function (id) {
   }
 };
 
-// Create general helper functions module and set it up
+// Add a some timeout to getJSON function
