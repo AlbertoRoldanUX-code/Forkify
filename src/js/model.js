@@ -32,4 +32,4 @@ export const loadRecipe = async function (id) {
   }
 };
 
-// Add a some timeout to getJSON function
+// Add the number of seconds of the setTimeOut function as a config value
