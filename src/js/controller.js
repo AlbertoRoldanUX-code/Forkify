@@ -18,7 +18,6 @@ const timeout = function (s) {
 
 ///////////////////////////////////////
 
-//Make first API call
 const controlRecipes = async function () {
   try {
     //Get id from the hash
@@ -42,5 +41,3 @@ controlRecipes();
 ['hashchange', 'load'].forEach(event =>
   window.addEventListener(event, controlRecipes)
 );
-
-// Refactor function from the ingredients section
