@@ -55,4 +55,9 @@ export const loadSearchResults = async function (query) {
   }
 };
 
-//Render error message when recipe doesn't exist
+export const getSearchResultsPage = function (page) {
+  const start = (page - 1) * 10;
+  const end = page * 10;
+
+  return state.search.results.slice(start, end);
+};
