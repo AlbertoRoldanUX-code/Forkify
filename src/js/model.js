@@ -55,4 +55,4 @@ export const loadSearchResults = async function (query) {
   }
 };
 
-// Render search results by creating resultsView
+//Render error message when recipe doesn't exist
