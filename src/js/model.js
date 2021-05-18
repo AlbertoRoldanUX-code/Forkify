@@ -29,8 +29,6 @@ export const loadRecipe = async function (id) {
       cookingTime: recipe.cooking_time,
       ingredients: recipe.ingredients,
     };
-
-    console.log(state.recipe);
   } catch (err) {
     console.error(`${err} 💥`);
     throw err;
@@ -57,9 +55,4 @@ export const loadSearchResults = async function (query) {
   }
 };
 
-// Implement searching functionality
-//1º Handle the event of a user searching for recipes
-//2º Load the search results
-//3º Render the search results
-
-//Create searchView.js and set it up
+// Render search results by creating resultsView
