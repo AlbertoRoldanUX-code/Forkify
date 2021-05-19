@@ -74,4 +74,4 @@ export const updateServings = function (newServings) {
   state.recipe.servings = newServings;
 };
 
-//Update recipe servings
+// Develop algorithm which updates the DOM where it changed
